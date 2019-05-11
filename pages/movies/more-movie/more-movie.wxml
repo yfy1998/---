@@ -1,0 +1,10 @@
+<!--pages/movies/more-movie/more-movie.wxml-->
+<import src="../movie_template/movie_template.wxml" />
+<!-- <import src="../moviestar_template/moviestar.wxml" /> -->
+<view class="more-container">
+  <block wx:for="{{list}}" wx:for-item="movie" wx:key="1">
+    <template is="movie" data="{{...movie}}" />
+  </block>
+</view>
+
+<view class="backtotop" catchtap='backtotop' >回到顶端</view>

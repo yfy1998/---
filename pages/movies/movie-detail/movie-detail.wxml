@@ -1,0 +1,42 @@
+<import src="../moviestar_template/moviestar.wxml" />
+<view class='moviedetailwrapepr'>
+  <image class='movieIamge' src='{{movie.imageurl}}' mode='aspectFill'></image>
+  <view class='head-img-hover'>
+    <text class='main-title'>{{movie.title}}</text>
+    <text class='sub-title'>别名: {{movie.alt_title}}</text>
+    <text class='country'>{{movie.country}} / {{movie.year}}</text>
+    <text class='country'>{{movie.duration}}</text>
+    <view class='like'>
+      <text class='highlight-font'>{{movie.rating.numRaters}}</text>
+      <text class='plain-font'>人评分过</text>
+    </view>
+  </view>
+  <image class='float-image' src='{{movie.imageurl}}'></image>
+  <view class='sub'>
+    <view class='flex-row'>
+      <text class='mark'>评分: </text>
+      <template is='moviestar' data='{{rating:movie.rating,stars:movie.stars}}' />
+    </view>
+    <view class='flex-row'>
+      <text class='mark'>{{movie.pubdate}} </text>
+    </view>
+    <view class='flex-row'>
+      <text class='labelstyle'>导演:</text>
+      <text class='mark'>{{movie.director}} </text>
+    </view>
+    <view class='flex-row'>
+      <text class='labelstyle'>演员:</text>
+      <text class='mark'>{{movie.cast}} </text>
+    </view>
+    <view class='flex-row'>
+      <text class='labelstyle'>类型:</text>
+      <text class='mark'>{{movie.type}} </text>
+    </view>
+  </view>
+  <view class='hr'></view>
+  <view class='synopsis' >
+    <text class='synopsis-font' >剧情简介</text>
+    <text class='summary-content'>{{movie.summary}}</text>
+  </view>
+  <view class="hr"></view>
+</view>

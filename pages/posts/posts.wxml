@@ -1,0 +1,37 @@
+<!--pages/posts/posts.wxml-->
+<import src="post-template/post-template.wxml" />
+
+<view class='navigatestyle'>
+  <view class='btn {{ishome? "active": ""}}' catchtap='onChangetohome'>首页</view>
+  <view class='btn {{ishome? "": "active"}}' catchtap='onChangetocolect'>收藏</view>
+</view>
+
+
+<view wx:if='{{ishome}}'>
+<swiper catchtap='swipernavigate' indicator-dots="{{true}}" autoplay="{{true}}">
+  <block wx:for="{{swiperlist}}" wx:key="1" wx:for-item="item">
+    <swiper-item>
+      <image src="{{item.imageUrl}}" data-news-id='{{item.newsId}}'></image>
+      <view class='swiperview' data-news-id='{{item.newsId}}'>
+        <text class='swiperdate' data-news-id='{{item.newsId}}'>{{item.date}}</text>
+        <text class='swipertitle' data-news-id='{{item.newsId}}'>{{item.title}}</text>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+  <block wx:for="{{postlist}}" wx:key="1" wx:for-item="item" wx:for-index="index">
+    <view bind:tap="toPostdetail" data-news-id="{{item.newsId}}">
+      <template is="post" data="{{...item}}" />
+    </view>
+  </block>
+</view>
+
+<view wx:if='{{!ishome}}'>
+  <block wx:for="{{colectnews}}" wx:key="1" wx:for-item="item" wx:for-index="index">
+    <view bind:tap="toPostdetail" data-news-id="{{item.newsId}}">
+      <template is="post" data="{{...item}}" />
+    </view>
+  </block>
+</view>
+
+<view class="backtotop" catchtap='backtotop' >回到顶端</view>

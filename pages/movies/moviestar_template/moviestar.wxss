@@ -1,0 +1,18 @@
+
+.star_container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.star_container image{
+  width: 20rpx;
+  height: 20rpx;
+  padding: 1rpx;
+}
+
+.star_container text{
+  font-size: 25rpx;
+  margin-left: 8rpx;
+  color: #1f3463;
+}

@@ -1,0 +1,26 @@
+/* pages/movies/more-movie/more-movie.wxss */
+@import "../movie_template/movie_template.wxss";
+
+.more-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.backtotop{
+  position: fixed;
+  right: 0;
+  top: 50%;
+  opacity: 0.5;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  font-size: 25rpx; 
+  font-weight: 500;
+  border: 1rpx solid;
+  line-height: 100rpx;
+  background-color: #828282; 
+  color: rgb(245, 245, 94);
+  margin-top: -50rpx;
+}

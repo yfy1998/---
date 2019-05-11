@@ -1,0 +1,14 @@
+<template name="post">
+  <view class="post-container">
+    <text class="title">{{title}}</text>
+    <image class="post-image" src="{{imageUrl}}"></image>
+    <text class="content">{{summary}}</text>
+    <view class="post-star">
+    <view class='reading'>
+      <image src="/images/icon/view.png"></image>
+      <text>{{reading}}</text>
+    </view>
+      <text>{{date}}</text>
+    </view>
+  </view>
+</template>

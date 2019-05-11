@@ -1,0 +1,21 @@
+<!--pages/movies/movies.wxml-->
+<import src="movielist_template/movielist_template.wxml" />
+<import src="movie_template/movie_template.wxml" />
+
+<view class="searchwrapper">
+  <icon type='search' size='25' ></icon>
+  <input type='text' placeholder='复仇者联盟4' confirm-type='done' placeholder-class='placeholderstyle' bindfocus='oninputFocus' bindconfirm='oninputConfirm' ></input>
+  <icon type='clear' size='30' bindtap='oncancle' ></icon>
+</view>
+
+<view class="movies_container" wx:if="{{movieListShow}}">
+  <template is="movielist" data="{{...in_theaters}}" />
+  <template is="movielist" data="{{...coming_soon}}" />
+  <template is="movielist" data="{{...top250}}" />
+</view>
+
+<view class='searchpanel' wx:if='{{searchpanelShow}}'>
+  <block wx:for="{{searchlist.list}}" wx:for-item="movie" wx:key="1">
+    <template is="movie" data="{{...movie}}" />
+  </block>
+</view>

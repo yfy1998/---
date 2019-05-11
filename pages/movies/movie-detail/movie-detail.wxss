@@ -1,0 +1,126 @@
+/* pages/movies/movie-detail/movie-detail.wxss */
+@import '../moviestar_template/moviestar.wxss';
+
+.moviedetailwrapepr {
+  display: flex;
+  flex-direction: column;
+}
+
+.movieIamge {
+  height: 350rpx;
+  width: 100%;
+  -webkit-filter: blur(15px);
+}
+
+.head-img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  font-size: 19px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+  letter-spacing: 2px;
+}
+
+.sub-title {
+  font-size: 28rpx;
+  color: #fff;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+}
+
+.country {
+  font-size: 28rpx;
+  color: rgb(71, 70, 70);
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}
+
+.like {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}
+
+.highlight-font {
+  color: #f21146;
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+
+.plain-font {
+  color: rgb(59, 58, 58);
+  font-size: 28rpx;
+}
+
+.float-image {
+  height: 238rpx;
+  width: 175rpx;
+  position: absolute;
+  top: 180rpx;
+  right: 40rpx;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  margin-left: 40rpx;
+}
+
+.mark {
+  margin-right: 30rpx;
+  white-space: wrap;
+  color: #999;
+  margin-bottom: 20rpx;
+  font-size: 25rpx;
+}
+
+.sub{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.labelstyle{
+  margin-right: 30rpx;
+  white-space: nowrap;
+  color: #999;
+  margin-bottom: 20rpx;
+  font-size: 25rpx;
+}
+
+.hr{
+    margin-top:30rpx;
+    height:1px;
+    width: 100%;
+    background-color: #d9d9d9;
+}
+
+.synopsis{
+    margin-left:40rpx;
+    display:flex;
+    flex-direction: column;
+    margin-top: 50rpx;
+}
+
+.synopsis-font{
+    color:#999;
+    font-size: 25rpx;
+}
+
+.summary-content{
+    margin-top: 20rpx;
+    margin-right: 40rpx;
+    margin-bottom: 20rpx;
+    line-height:40rpx;
+    letter-spacing: 1px;
+    font-size: 25rpx;
+}

@@ -1,0 +1,20 @@
+<!--pages/posts/post-detail/post-detail.wxml-->
+<view class="detailcontainer">
+  <image class="headimage" src="{{curnews.imageUrl}}"></image>
+  <view class="avatar">
+    <!-- <image src="{{curnews.avatar}}"></image>
+    <text class="name">{{curnews.writer}}</text> -->
+    <text class="release">发表于</text>
+    <text class="ddate">{{curnews.addTime}}</text>
+  </view>
+  <text class="dtitle">{{curnews.title}}</text>
+  <view>
+    <view class="horizon"></view>
+    <view class="icon">
+      <image wx:if="{{collected}}" catchtap='ontapcollect' src="/images/icon/collection.png"></image>
+      <image wx:else catchtap='ontapcollect' src="/images/icon/collection-anti.png" ></image>
+      <button class="sharebutton" open-type="share"><image  src="/images/icon/share.png"></image></button>
+    </view>
+  </view>
+  <text class="dcontent">{{curnews.newtext}}</text>
+</view>
